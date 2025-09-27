@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* html, body {
+    height: 100%;
+    width: 100%;
+} */
+
+@font-face {
+    font-family: fraunces;
+    src: url(./assets/fonts/Fraunces.ttf);
+}
+@font-face {
+    font-family: montserrat;
+    src: url(./assets/fonts/Montserrat.ttf);
+}
+.wrapper {
+    background-color: rgb(240, 230, 220);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* width: 100vw; */
+}
+.card {
+    width: 700px;
+    height: 420px;
+    overflow-x: hidden;
+    display: grid;
+    border-radius: 1.5rem;
+    grid-template-columns: 4fr 5fr;
+    grid-template-rows: 1fr;
+}
+.image {
+    /* min-width: 200px; */
+    /* height: 300px; */
+    background-image: url(./assets/images/cup.jpg);
+    /* background-size: cover; */
+    background-position: right bottom;
+    background-size: 400px;
+}
+
+.desc {
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+#title {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.top {
+    font-size: 2.5rem;
+    line-height: 40px;
+    text-transform: capitalize;
+}
+
+.text {
+    font-family: montserrat;
+    color: rgb(98, 103, 120);
+    font-size: 1.02rem;
+    font-weight: 500;
+}
+
+.heading {
+    font-family: fraunces;
+}
+
+.price-div {
+    display: flex;
+    align-items: baseline;
+}
+.new-price {
+    font-size: 2rem;
+    font-weight: 900;
+    padding-right: 10px;
+    color: rgb(70, 129, 96);
+}
+
+button {
+    padding: 15px 0;
+    border: 0;
+    background-color: rgb(70, 129, 96);
+    border-radius: 10px;
+}
+button:hover {
+    background-color: rgb(38, 61, 48);
+}
+
+button > span.text {
+    padding-left: 8px;
+    color: white;
+}
+
+@media (max-width: 650px) {
+    .wrapper {
+        height: 1000px;
+    }
+
+    .card {
+        width: 420px;
+        height: 800px;
+        overflow-x: hidden;
+        display: grid;
+        border-radius: 1.5rem;
+        grid-template-rows: 5fr 5fr;
+        grid-template-columns: 1fr;
+    }
+
+    .image {
+        background-size: cover;
+        background-position: bottom left;
+    }
+}

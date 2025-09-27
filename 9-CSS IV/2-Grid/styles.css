@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    background-color: rgb(242, 176, 242);
+    height: 500px;
+    border: 2px solid green;
+
+    display: grid;
+
+    /* not response unit : px */
+    /* grid-template-columns: 200px 200px 200px;
+    grid-template-rows: repeat(4, 90px); */
+
+    /* (Better)Response unit : fr  */
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    /* shorthand :-   grid-template: grid-template-rows / grid-template-columns */
+    /* grid-template: repeat(4, 1fr) / repeat(3, 1fr); */
+
+    gap: 30px;
+
+    /* When there are extra rows, or columns, auto sets the row and column sizing */
+    grid-auto-rows: 50px;
+    grid-auto-columns: 100px;
+}
+.box {
+    /*  dont give height and width to grid items to make them fully flexible */
+    /* height: 80px; */
+    /* width: 80px; */
+    background-color: aquamarine;
+    border: 2px solid rgb(251, 255, 0);
+}
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.box2 {
+    /* creates an extra column, whose sizing will be accoording to auto column size */
+    grid-column: 3 / 5;
+}
+
+.box3 {
+    grid-row: 2 / 4;
+}
+
+.box4 {
+    /* row start / column start / row end / column end */
+    grid-area: 2 / 2 / 4 / 4;
+}

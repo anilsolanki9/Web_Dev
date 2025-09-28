@@ -128,4 +128,13 @@ Settings> Developer Settings> Personal token Access> Token Classis > Generate Ne
 
 
 
+Rebase problem Remote one commit above 
+git pull origin main --rebase
+git add .
+git rebase --continue
+
+git push origin main
+
+
+
 

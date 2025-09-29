@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 8vh 87vh 5vh;
+    grid-template-columns: 15% 75% 10%;
+    height: 100vh;
+}
+
+.div {
+    background-color: rgb(127, 148, 255);
+    border: 2px solid rgb(231, 231, 63);
+}
+
+.box-1,
+.box-5 {
+    grid-column: 1/-1;
+}

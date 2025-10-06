@@ -1,0 +1,193 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glow-btn {
+    height: 50px;
+    width: 220px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: white;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.glow-btn:before {
+    content: '';
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3 ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-btn:active {
+    color: rgb(0, 0, 0);
+}
+
+.glow-btn:active:after {
+    background: transparent;
+}
+
+.glow-btn:hover:before {
+    opacity: 1;
+}
+
+.glow-btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+} */
+
+/* New */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.glow-btn {
+    width: 300px;
+    height: 70px;
+    border: none;
+    background: #585858;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.glow-btn::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -5px;
+    left: -5px;
+    height: calc(100% + 10px);
+    width: calc(100% + 10px);
+    background: linear-gradient(
+        in oklab 45deg,
+        red,
+        yellow,
+        green,
+        blue,
+        purple,
+        rgb(255, 117, 220),
+        red,
+        blue,
+        purple
+    );
+    background-repeat: repeat;
+    background-size: 500%;
+    animation: glowing 15s infinite linear;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+    filter: blur(10px) brightness(1.5);
+}
+
+.glow-btn:hover::before {
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 500% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.glow-btn::after {
+    content: '';
+    width: 300px;
+    height: 70px;
+    border: none;
+    background: #585858;
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.glow-btn:active {
+    color: black;
+}
+
+.glow-btn:active::after {
+    background: transparent;
+}
+
+.glow-btn:active {
+    background: transparent;
+}

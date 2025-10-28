@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.btn {
+.btn-red {
     padding: 0.8rem 2.3rem;
     background-color: rgb(255, 44, 65);
     color: white;
@@ -25,7 +25,7 @@
     /* transform: scale(1); */
 }
 
-.btn::before {
+.btn-red::before {
     content: '';
     background-color: rgb(18, 18, 18);
     position: absolute;
@@ -39,11 +39,11 @@
     transition: transform 0.8s;
 }
 
-.btn:hover {
+.btn-red:hover {
     color: rgb(255, 44, 65);
     /* transform: scale(1.3); */
 }
 
-.btn:hover::before {
+.btn-red:hover::before {
     transform: scaleX(1);
 }
